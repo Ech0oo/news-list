@@ -1,7 +1,8 @@
 'use strict';
 
 var request = require('request'),
-    cheerio = require('cheerio');
+    cheerio = require('cheerio'),
+    console = require('better-console');  
 
 request('https://habrahabr.ru/', function (error, response, body) {
   if (error) {
@@ -12,11 +13,12 @@ request('https://habrahabr.ru/', function (error, response, body) {
     var $ = cheerio.load(body);
     
     $('.post__title_link').each(function(){
-      cards.push({
-          title:$('.post__title_link',this).text(),
-          url:$('a',this).attr('href')
-      });
+        cards.push({
+            title : $(this).text(),
+            url : $(this).attr('href')
+        });
     });
-    console.log(cards);
+    
+    console.table(cards);
   }
 })

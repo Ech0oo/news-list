@@ -1,0 +1,25 @@
+{
+  "name": "news-list",
+  "version": "1.0.0",
+  "description": "Get news titles and urls from the first page of the site http://habrahabr.ru/",
+  "main": "news.js",
+  "dependencies": {
+    "better-console": "^0.2.4",
+    "cheerio": "^0.20.0",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ech0oo/news-list.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ech0oo/news-list/issues"
+  },
+  "homepage": "https://github.com/Ech0oo/news-list#readme"
+}
